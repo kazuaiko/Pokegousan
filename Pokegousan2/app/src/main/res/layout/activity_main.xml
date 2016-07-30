@@ -8,6 +8,13 @@
     android:fitsSystemWindows="true"
     tools:openDrawer="start">
 
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/listView"
+        android:layout_marginTop="150dp"
+        android:layout_alignParentTop="true"></ListView>
+
     <include
         layout="@layout/app_bar_main"
         android:layout_width="match_parent"
