@@ -27,6 +27,10 @@
         <activity
             android:name=".PoppoCalcActivity"
             android:label="@string/title_activity_poppo_calc"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Tweet2Activity"
+            android:label="@string/title_activity_tweet2"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

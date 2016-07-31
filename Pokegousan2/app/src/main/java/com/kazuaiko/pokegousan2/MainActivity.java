@@ -151,10 +151,7 @@ public class MainActivity extends AppCompatActivity
 
             // 追加
             customTabsIntent.intent.setPackage(packageName);
-
             customTabsIntent.launchUrl(this, Uri.parse(url));
-
-
         } else if (id == R.id.nav_slideshow) {
             // インテントの生成
             // ポッポ計算機
@@ -163,8 +160,8 @@ public class MainActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_manage) {
             // インテントの生成
-//            Intent intent = new Intent(MainActivity.this, TweetActivity.class);
-//            startActivity(intent);
+            Intent intent = new Intent(MainActivity.this, Tweet2Activity.class);
+            startActivity(intent);
         } else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_send) {

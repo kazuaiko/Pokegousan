@@ -13,11 +13,11 @@
         <item
             android:id="@+id/nav_slideshow"
             android:icon="@drawable/ic_menu_slideshow"
-            android:title="ポッポ計算機(絶望計算機)" />
+            android:title="ポッポ計算機" />
         <item
             android:id="@+id/nav_manage"
             android:icon="@drawable/ic_menu_manage"
-            android:title="Tools" />
+            android:title="ポケGOツイート" />
     </group>
 
     <item android:title="Communicate">
@@ -25,11 +25,11 @@
             <item
                 android:id="@+id/nav_share"
                 android:icon="@drawable/ic_menu_share"
-                android:title="Share" />
+                android:title="建設予定地A" />
             <item
                 android:id="@+id/nav_send"
                 android:icon="@drawable/ic_menu_send"
-                android:title="Send" />
+                android:title="建設予定地B" />
         </menu>
     </item>
 

@@ -191,11 +191,11 @@ public class PoppoCalcActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
         // インテントの生成
-        // ポッポ計算機
-        Intent intent = new Intent(PoppoCalcActivity.this, MainActivity.class);
-        startActivity(intent);
+
         if (id == R.id.nav_camera) {
-            // Handle the camera action
+            // メイン
+            Intent intent = new Intent(PoppoCalcActivity.this, MainActivity.class);
+            startActivity(intent);
         } else if (id == R.id.nav_gallery) {
             // URLをひらく
             //ポケストップGOを開く
@@ -214,7 +214,9 @@ public class PoppoCalcActivity extends AppCompatActivity
         } else if (id == R.id.nav_slideshow) {
 
         } else if (id == R.id.nav_manage) {
-
+            // インテントの生成
+            Intent intent = new Intent(PoppoCalcActivity.this, Tweet2Activity.class);
+            startActivity(intent);
         } else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_send) {
