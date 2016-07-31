@@ -15,36 +15,108 @@
 
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-    <TextView
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/current_lv"
-        android:text="現在のレベル："
-        android:layout_marginTop="90dp"
-        android:textSize="20sp"
-        android:textColor="#111111"
-        />
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/current_lv"
+            android:text="現在のレベル："
+            android:layout_marginTop="70dp"
+            android:textSize="24sp"
+            android:textColor="#111111"/>
+        <Spinner
+            android:id="@+id/current_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawSelectorOnTop="true"
+            android:prompt="@string/lv"
+            android:entries="@array/lv_array"
+            android:layout_marginTop="70dp"
+            android:textSize="24sp"
+            android:textColor="#222222"
+            android:spinnerMode="dropdown" />
+
     </LinearLayout>
-    <Spinner
-        android:id="@+id/spinner"
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:drawSelectorOnTop="true"
-        android:prompt="@string/lv"
-        android:entries="@array/lv_array"
-        />
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/target_lv"
+            android:text="目標のレベル："
+            android:layout_marginTop="120dp"
+            android:textSize="24sp"
+            android:textColor="#111111"
+            />
 
+        <Spinner
+            android:id="@+id/target_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawSelectorOnTop="true"
+            android:prompt="@string/tlv"
+            android:entries="@array/lv_array"
+            android:layout_marginTop="120dp"
+            android:textSize="24sp"
+            android:textColor="#222222"
+            android:spinnerMode="dropdown"
+            />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/target_lv"
-        android:text="目標のレベル："
-        android:layout_marginTop="2dp"
-        android:textSize="16sp"
-        android:textColor="#111111"
-        />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_marginTop="170dp"
+            android:background="@android:color/holo_blue_dark"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/exp_text"
+            android:text="必要な経験値：➖➖"
+            android:layout_margin="5dp"
+            android:textSize="20sp"
+            android:textColor="#111111"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/poppo_text"
+            android:text="必要なポッポ捕獲：➖➖回"
+            android:layout_margin="5dp"
+            android:textSize="20sp"
+            android:textColor="#111111"
+            />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/holo_blue_dark"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/example_text"
+            android:layout_margin="10dp"
+            android:text="[参考]レベルアップに必要な経験値一覧"
+            android:textSize="16sp"
+            android:textColor="#c71d3c"
+            />
+
+        <ListView android:id="@+id/listView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#d6d6d6"/>
+    </LinearLayout>
 
     <android.support.design.widget.NavigationView
         android:id="@+id/nav_view"

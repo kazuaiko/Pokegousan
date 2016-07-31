@@ -36,8 +36,9 @@ public class BrowserRss extends ActionBarActivity {
 
         textView = (TextView) findViewById(R.id.title);
         textView.setText(title);
-        textView.setHeight(130);
-        textView.setBackgroundColor(Color.parseColor("#ccffff"));
+        textView.setText(title);
+
+        textView.setBackgroundColor(Color.parseColor("#cccccc"));
 
         myWebView = (WebView) findViewById(R.id.myWebView);
 

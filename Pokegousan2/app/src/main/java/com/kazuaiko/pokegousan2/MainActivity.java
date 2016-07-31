@@ -162,7 +162,9 @@ public class MainActivity extends AppCompatActivity
             startActivity(intent);
 
         } else if (id == R.id.nav_manage) {
-
+            // インテントの生成
+//            Intent intent = new Intent(MainActivity.this, TweetActivity.class);
+//            startActivity(intent);
         } else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_send) {
