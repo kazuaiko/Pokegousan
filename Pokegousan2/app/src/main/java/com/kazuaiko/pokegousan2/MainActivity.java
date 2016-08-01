@@ -27,7 +27,7 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity
         implements LoaderManager.LoaderCallbacks<List<FeedItem>>, NavigationView.OnNavigationItemSelectedListener {
     private ListView mListView;
-    private ArrayAdapter<FeedItem> mListAdapter;
+    private FeedItemAdapter mListAdapter;
 
     private List<FeedItem> mItemList;
 
@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity
         //リスト対応
         mListView = (ListView)findViewById(R.id.listView);
         mItemList = new ArrayList<>();
-        mListAdapter = new MyAdapter(this, mItemList);
+        mListAdapter = new FeedItemAdapter(this, mItemList);
         mListView.setAdapter(mListAdapter);
 
         // リストアイテムの間の区切り線を非表示にする
@@ -184,10 +184,10 @@ public class MainActivity extends AppCompatActivity
     @Override
     public void onLoadFinished(Loader<List<FeedItem>> loader, List<FeedItem> data) {
         Log.d("MainActivity", "onLoadFinished");
-        mListAdapter = new MyAdapter(this, data);
         //mListAdapter.addAll(data);
         Toast.makeText(MainActivity.this, "onLoadFinished", Toast.LENGTH_SHORT).show();
-        mListView.setAdapter(mListAdapter);
+        FeedItemAdapter adapter = (FeedItemAdapter) mListView.getAdapter();
+        adapter.setList(data);
         flgDat = true;
     }
 
